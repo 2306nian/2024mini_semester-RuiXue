@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>瑞雪</title>
+        <link rel="stylesheet" href="login.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="login.js"></script>
+    </head>
+
+    <body>
+        <div class="fade" id="fade"></div>
+        <div class="wrapper">
+            <!-- <div class="title_text">
+                <div class="login_title"><strong>瑞雪</strong></div>
+            </div> -->
+
+            <div class="form_container">
+                <div class="form_nav">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="nav_text login">登录</label>
+                    <label for="signup" class="nav_text signup">注册</label>
+                    <div class="slider_tab"></div>
+                </div>
+                
+                <div class="form_inner">
+                    <form action="#" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="用户名" id="login_UN" required>
+                        </div>
+    
+                        <div class="field">
+                            <input type="password" placeholder="密码" id="login_PW" required>
+                        </div>
+    
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="登入" onclick="log()">
+                        </div>
+                        <a href="#" onclick="fadeToBlack(event)" class="link_text">关于我们</a>
+                        <script>
+                            function fadeToBlack(event) {
+                                event.preventDefault(); // 阻止默认链接跳转
+                                const fadeElement = document.getElementById('fade');
+                                fadeElement.style.pointerEvents = 'auto'; // 允许事件穿透
+                                fadeElement.style.opacity = 1; // 开始渐变为全黑
+                                setTimeout(() => {
+                                    window.location.href = "../introduction/index.html"; // 渐变完成后跳转到新页面
+                                }, 1000); // 设置渐变时间与 CSS transition 时间一致
+                            }
+                        </script>
+                    </form>
+    
+                    <form class="signup">
+                        <div class="field">
+                            <input type="text" placeholder="用户名" id="signup_UN" required>
+                        </div>
+    
+                        <div class="field">
+                            <input type="password" placeholder="请输入密码" id="signup_PW1" required>
+                        </div>
+    
+                        <div class="field">
+                            <input type="password" placeholder="请确认密码" id="signup_PW2" required>
+                        </div>
+    
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="注册" onclick="reg()">
+                        </div>
+                        <a href="#" class="link_text">关于我们</a>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        
+
+    </body>
+
+</html>

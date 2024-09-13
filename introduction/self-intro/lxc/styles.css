@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 4px solid #333;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+}
+
+/* About section styling with image */
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-content img {
+    border-radius: 10px;  /* 调整为圆角矩形 */
+    margin-right: 20px;
+    width: 192px;  /* 放大后的宽度 */
+    height: 306px; /* 放大后的高度 */
+    object-fit: cover;
+}
+
+/* 图片悬停效果 */
+.about-content img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-content p {
+    flex: 1;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* 页面加载动画 */
+body.loading {
+    overflow: hidden;
+}
+
+.loading .container {
+    visibility: hidden;
+}
+
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 链接悬停效果 */
+a:hover {
+    color: #333;
+    border-bottom: 2px solid #333;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+.loading .container {
+    visibility: hidden;
+}
+
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 链接悬停效果 */
+a:hover {
+    color: #333;
+    border-bottom: 2px solid #333;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+/* 图片悬停效果 */
+.about-content img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* ...之前的CSS代码保持不变... */
+
+/* Skills section styling */
+/* ...之前的CSS代码保持不变... */
+
+/* Skills section styling */
+/* ...之前的CSS代码保持不变... */
+
+/* Skills section styling */
+/* ...之前的CSS代码保持不变... */
+
+/* Skills section styling */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    margin: 0 0 10px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.skill-bar {
+    background: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+}
+
+.skill-level {
+    background: #333; /* 使用与页面一致的深色 */
+    color: #fff;
+    height: 100%;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 30px; /* 使文本垂直居中 */
+    border-radius: 10px 0 0 10px;
+}
+
+/* 动态加载动画 */
+@keyframes loadSkill {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.skill-level {
+    animation: loadSkill 2s ease-in-out;
+}
+

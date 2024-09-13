@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./webfonts/iconfont.css">
+    <link rel="stylesheet" href="./music-player/music-player.css" />
+    <link href="favicon.ico" type="image/x-icon" rel="icon">
+    <title>瑞雪</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            position: absolute;
+            background: #333;
+            padding: 0;
+            margin: 0;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        #music-wrapper {
+            margin: 0 0;
+            border-width: 0px;
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <iframe src="./login/login.html" id="music-wrapper"></iframe>
+    <div class="music-container" id="music-container">
+
+        <audio src="./music-player/music/爱丽丝.mp3" id="audio"></audio>
+
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="iconfont icon-backward_fill"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="iconfont icon-play_fill"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="iconfont icon-play_forward_fill"></i>
+            </button>
+        </div>
+    </div>
+    <div class="auto-play-music"></div>
+</body>
+<script src="./music-player/music-player.js"></script>
+
+</html>

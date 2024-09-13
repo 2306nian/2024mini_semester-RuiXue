@@ -1,0 +1,33 @@
+
+.overlayMenu {
+    position:absolute;
+    right: 1vw;
+    left: 1vw;
+    top:1vw;
+    background: var(--menu-background);
+    color: var(--menu-font-color);
+    border:1px solid var(--menu-border-color);
+    z-index:2;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+  }
+  
+  .overlayMenu .KeyboardMenu {
+    position: relative;
+    border:0;
+  }
+  
+  .overlayMenu h2  {
+    font-size:clamp(0.05rem, -0.15rem + 1vw, 0.6rem);
+    color: var(--menu-font-color);
+    margin:0;
+    padding: 2px 0;
+    text-align:center;
+    border-bottom: 1px solid #A48465;
+  }
+
+  .option button{
+    font-size:clamp(0.03rem, -0.141rem + 0.85vw, 0.5rem);
+    height: 0.6vw;
+  }

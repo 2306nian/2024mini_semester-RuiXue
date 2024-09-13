@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  /* margin-left: 50px; */
+  align-items: center;
+  /* background: -webkit-linear-gradient(left, #a445b2, #fa4299); */
+  background-image: url("./background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative;
+  overflow: hiden;
+}
+
+a {
+  text-shadow: 
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  font-family: 方正舒体;
+  font-size: 3vw;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(109, 0, 0);
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(64, 1, 1);
+  transform: translate(5px,5px);
+
+  text-shadow: 
+  -0.8px -0.8px 0 rgb(162, 18, 18),
+  0.8px -0.8px 0 rgb(162, 18, 18),
+  -0.8px 0.8px 0 rgb(162, 18, 18),
+  0.8px 0.8px 0 rgb(162, 18, 18);
+}
+
+
+div {
+  position: fixed;
+  margin-top: 40%;
+  margin-left: 80%;
+  margin-bottom: 20%;
+  margin-right: 10%;
+  height: 40%;
+  width: 20%;
+}
+
+.p2 {
+  text-shadow: 
+  -0.8px -0.8px 0 #000,
+  0.8px -0.8px 0 #000,
+  -0.8px 0.8px 0 #000,
+  0.8px 0.8px 0 #000;
+  font-family: Stylus BT;
+  font-size: 1.5vw;
+  color: rgb(109, 0, 0);
+  margin-left: 0.1vw;
+}
+
+.fade {
+  /*position: fixed;*/
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100000px;
+  height: 100000px;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  z-index: 10;
+}

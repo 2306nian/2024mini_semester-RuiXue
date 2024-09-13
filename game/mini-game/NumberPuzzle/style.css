@@ -1,0 +1,100 @@
+*{
+    margin:0;padding:0;box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --bgcol:#85903f;
+    --mcol0:rgb(255,232,210);
+    --mcol1:rgb(251, 215, 181);
+    --mcol2:rgb(248, 196, 147);
+    --txtcol0:rgb(157, 100, 78);
+    --txtcol1:rgb(183, 136, 117);
+    --whitecol:#ECEFF1;
+    --darkcol:#263238;
+}
+
+
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:15vh;
+    /* background-image: url(../maze/mini-back.png); */
+}
+
+#puzzle_container{
+    position: relative;
+    width: 50vh;
+    height:50vh;
+    background-color:var(--darkcol);
+    border-radius:12px;
+    border:3px solid var(--darkcol);
+    /*box-shadow:0px 8px 0px var(--mcol0);*/
+}
+
+.puzzle_block{
+    position:absolute;
+    left:0;
+    top:0;
+    width:33.3333%;
+    height:33.3333%;
+    color:var(--whitecol);
+    font-size:10vh;
+    font-weight:bold;
+    text-align:center;
+    cursor: pointer;
+    user-select:none;
+    transition:left 0.3s,top 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#msg {
+    width: 50vh;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #ffffff33;
+    border-radius: 8px;
+    margin-top:5px;
+}
+
+.block_back {
+    border-radius:8px;
+    background-color:var(--txtcol1);
+    height: 96%;
+    width: 96%;
+}
+
+/*difficulty container*/
+#difficulty_container{
+    display:flex;
+    flex-direction:row;
+    width:50vh;
+    height:10vh;
+    background-color:var(--darkcol);
+    border-radius:8px;
+    margin-top:22px;
+}
+.difficulty_button{
+    flex-grow:1;
+    background-color:inherit;
+    color:var(--mcol2);
+    text-align:center;
+    font-size:3vh;
+    font-weight:bold;
+    padding-top:5%;
+    margin:4px;
+    cursor: pointer;
+    transition:font-size 0.3s;
+}
+.difficulty_button:hover{
+    opacity:0.8;
+    font-size:3.5vh;
+}
+.difficulty_button.active{
+    background-color:inherit;
+    color:var(--mcol0);
+}

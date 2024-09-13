@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人介绍</title>
+    <style>
+        body{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            justify-items: center;
+            /* margin-left: 50px; */
+            align-items: center;
+            background-color: beige;
+            background-image: url("./intro_background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .contain{
+            margin-top: 50px;
+            grid-template-columns: repeat(2, 1fr); /* 列定义 */
+            gap: 10px; /* 间隙 */
+            padding: 10px;
+            width: 700px;
+            height: 700px;
+            display:grid;
+            background-color: rgba(97, 188, 216, 0.5);
+            justify-items: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .contain .title{
+            border-radius: 5px;
+            height:240x;
+            width: 300px;
+            height: 250px;
+            background-color: rgba(255, 165, 0, 0.5);
+            margin-top: 20px;
+            text-align: center;
+        }
+        #head{
+            margin-left: 25px;
+            height: 100px;
+            width: auto;
+        }
+        #introduction{
+            height: 100px;
+            width: auto;
+        }
+        .contain .ex{
+            background-color:rgba(250, 235, 215, 0.8);
+            width: 300px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        .text{
+            margin-left: 20px;
+            opacity: 100%;
+        }
+        .contain .skill{
+            width: 300px;
+            background-color: rgba(255, 235, 205, 0.9);
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .contain .contact{
+            background-color: blanchedalmond;
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="title">
+            <h1 class="title-text">郑凯峰</h1>
+            <p><small>摸鱼爱好者</small></p>
+            <img src="head.jpg" id="head">
+            <img src="introduction.jpg" id="introduction">
+        </div>
+        <div class="ex">
+            <h2 class="text">成就</h2>
+            <p class="text">
+                交界地之王<br>
+                猫车享受者<br>
+                幻想乡食堂老板娘(?)<br>
+                <s>穗织镇救世主</s><br>
+                银河系第四天灾<br>
+                新美国最强快递员<br>
+                东一局耐飞王<br>
+                夜之城<s>最大怨种</s>活传奇<br>
+                科普卢星区指挥官<br>
+                威伦耐叉王<br>
+                Circle普通店员<br>
+            </p>
+        </div>
+        <div class="skill">
+            <h2 class="text">技能</h2>
+            <p class="text">
+                C/C++——在学<br>
+                JAVA——想学<br>
+                Python——如会<br>
+                深度学习框架基础(tenserflow,pytorch)——能看懂<br>
+                机器人及计算机视觉——全靠被带飞<br>
+            </p>
+            <a href="https://www.robomaster.com/zh-CN" class="text">ps:了解了解robomaster谢谢喵<br></a>
+            <a class="text" href="#">加入追梦战队谢谢喵</a>
+        </div>
+        <div class="contact">
+            <h2 class="text">联系我</h2>
+            <p class="text">QQ: 1745129114<br>
+            邮箱:1745129114@qq.com<br> (就是qq邮箱懒得搞其他平台的了QWQ)</p>
+        </div>
+    </div>
+    
+</body>
+
+</html>

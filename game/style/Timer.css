@@ -1,0 +1,15 @@
+.Timer{
+    position: fixed;
+    top: 0;
+    left: 1.5vw;
+    width: 24vw;
+    height: 3vh;
+}
+.Timer p{
+    color:red;
+    caret-color: transparent;
+    font-size:clamp(0.05rem, -0.15rem + 1vw, 0.6rem);
+    width: 24vw;
+    height: 3vh;
+    margin: 0;
+}

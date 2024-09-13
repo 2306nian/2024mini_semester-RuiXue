@@ -1,0 +1,134 @@
+body {
+
+
+  /* 设置字体颜色为白色以保证与背景色有足够的对比度 */
+  margin: 0;
+  /* 去除默认的边距 */
+  padding: 0;
+  /* 去除默认的内边距 */
+  font-family: "FZShuTi", "方正舒体", sans-serif;
+  /* 字体设置为方正舒体 */
+  overflow: hidden;
+ 
+  background-size: cover; /* 确保背景图片覆盖整个区域并适应浏览器窗口 */
+
+}
+
+.header {
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  /* 靠近网页顶部 */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  /* ;半透明背景色 */
+  padding: 0 10px;
+  /* 左右内边距，去掉上下内边距以确保紧贴顶部 */
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  justify-content: space-between;
+  /* 左右对齐 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+.logo {
+  font-family: 方正舒体;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(109, 0, 0);
+  padding: 10px 0;
+  /* 上下内边距，确保垂直对齐 */
+  width: 40%;
+}
+
+nav {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  /* 横向排列列表项 */
+}
+
+nav li {
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 600;
+  position: relative;
+  /* 确保伪元素的相对定位 */
+}
+
+nav a {
+  color: rgb(109, 0, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-family: 方正舒体;
+  font-size: 22px;
+  display: inline-block;
+  position: relative;
+  /* 确保伪元素的绝对定位相对于链接 */
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: rgb(109, 0, 0);
+  /* 进度条颜色 */
+  position: absolute;
+  top: -5px;
+  /* 放置在文字上方 */
+  left: 0;
+  /* 从左边开始 */
+  width: 0%;
+  /* 初始宽度为0% */
+  transition: width 0.3s ease-in-out;
+  /* 添加过渡效果 */
+}
+
+nav a:hover::before {
+  width: 80%;
+  /* 悬停时进度条展开 */
+}
+.fade {
+  
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  z-index: 10;
+
+}
+#blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 9999;
+  /* Ensure it is on top */
+  pointer-events: none;
+  /* Allow clicks to pass through */
+}

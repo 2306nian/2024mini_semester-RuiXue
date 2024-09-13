@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>瑞雪</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+    <div>
+        <p><a href="../game/index.html" onclick="fadeToBlack1(event)">新游戏</a></p>
+        <p class="p2">New Game</p>
+        <p><a href="#" onclick="fadeToBlack2(event)">继续游戏</a></p>
+        <p class="p2">Load Game</p>
+        <p><a href="#" onclick="fadeToBlack3(event)">成就</a></p>
+        <p class="p2">Achievement</p>
+        <p><a href="#" onclick="fadeToBlack4(event)">关于我们</a></p>
+        <p class="p2">About Us</h2>
+    </div> 
+    <div class="fade" id="fade"></div>
+
+    <script>
+        function fadeToBlack1(event) {
+            sessionStorage.setItem('RuiXue_useSaveFile', false);
+            event.preventDefault(); // 阻止默认链接跳转
+            const fadeElement = document.getElementById('fade');
+            fadeElement.style.pointerEvents = 'auto'; // 允许事件穿透
+            fadeElement.style.opacity = 1; // 开始渐变为全黑
+            setTimeout(() => {
+                window.location.href = "../game/index.html"; // 渐变完成后跳转到新页面
+            }, 1000); // 设置渐变时间与 CSS transition 时间一致
+        }
+        function fadeToBlack2(event) {
+            sessionStorage.setItem('RuiXue_useSaveFile',true);
+            event.preventDefault();
+            const fadeElement = document.getElementById('fade');
+            fadeElement.style.pointerEvents = 'auto';
+            fadeElement.style.opacity = 1;
+            setTimeout(() => {
+                window.location.href = "../game/index.html";
+            }, 1000);
+        }
+        function fadeToBlack3(event) {
+            event.preventDefault();
+            const fadeElement = document.getElementById('fade');
+            fadeElement.style.pointerEvents = 'auto';
+            fadeElement.style.opacity = 1;
+            setTimeout(() => {
+                window.location.href = "../achv/achv.html";
+            }, 1000);
+        }
+        function fadeToBlack4(event) {
+            event.preventDefault();
+            const fadeElement = document.getElementById('fade');
+            fadeElement.style.pointerEvents = 'auto';
+            fadeElement.style.opacity = 1;
+            setTimeout(() => {
+                window.location.href = "../introduction/index.html";
+            }, 1000);
+        }
+    </script>
+    </body>
+
+</html>

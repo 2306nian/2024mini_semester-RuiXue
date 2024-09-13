@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../favicon.ico" type="image/x-icon" rel="icon">
+    <title>关于我们</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="fade" id="fade"></div>
+    <div class="header">
+        <h1 class="logo">瑞雪 auspicious snow</h1>
+    
+        <nav>
+          <ul>
+            <li><a href="#" onclick="fadeToBlack2(event)">成就页</a></li>
+            <li><a href="#" onclick="fadeToBlack3(event)">标题页</a></li>
+            <li><a href="#" onclick="fadeToBlack4(event)">登入页</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/王鸣浩.jpg" alt="">
+                    </div>
+                    <h1>王鸣浩</h1>
+                    <h2>项目经理/CIO</h2>
+                    <a href="./self-intro/wmh/index.html">了解更多</a>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/demo.png" alt="">
+                    </div>
+                    <h1>返回登入页面</h1>
+                    <h2>《瑞雪》</h2>
+                    <a href="#" onclick="fadeToBlack5(event)">返回</a>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/郑凯峰.jpg" alt="">
+                    </div>
+                    <h1>郑凯峰</h1>
+                    <h2>主编程</h2>
+                    <a href="./self-intro/zkf/个人介绍.html">了解更多</a>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/陆相岑.jpg" alt="">
+                    </div>
+                    <h1>陆相岑</h1>
+                    <h2>主编程</h2>
+                    <a href="./self-intro/lxc/introduction.html">了解更多</a>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/游翔宇.jpg" alt="">
+                    </div>
+                    <h1>游翔宇</h1>
+                    <h2>文书/剧情</h2>
+                    <a href="./self-intro/yxy/个人介绍游翔宇.html">了解更多</a>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/林馨耀.jpg" alt="">
+                    </div>
+                    <h1>林馨耀</h1>
+                    <h2>程序/剧情</h2>
+                    <a href="./self-intro/lxy/lxy.html">了解更多</a>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="photo">
+                        <img src="./images/周铭翔.jpg" alt="">
+                    </div>
+                    <h1>周铭翔</h1>
+                    <h2>总文案</h2>
+                    <a href="./self-intro/zmx/net.html">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+    </div>
+</body>
+
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+
+<script>
+    function fadeToBlack1(event) {
+        event.preventDefault(); // 阻止默认链接跳转
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto'; // 允许事件穿透
+        fadeElement.style.opacity = 1; // 开始渐变为全黑
+        setTimeout(() => {
+            window.location.href = ""; // 渐变完成后跳转到新页面
+        }, 1000); // 设置渐变时间与 CSS transition 时间一致
+    }
+    function fadeToBlack2(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../achv/achv.html";
+        }, 1000);
+    }
+    function fadeToBlack3(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../main/main.html";
+        }, 1000);
+    }
+    function fadeToBlack4(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../login/login.html";
+        }, 1000);
+    }
+    function fadeToBlack5(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../login/login.html";
+        }, 1000);
+    }
+    </script>
+
+</html>

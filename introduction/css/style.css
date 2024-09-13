@@ -1,0 +1,273 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:url(../images/bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  height: 100%;
+  padding: 0 0;
+}
+.slide-content{
+  margin: 0 0;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  /* 相对定位 */
+  position: relative;
+  width: 330px;
+  height: 370px;
+  margin: 20px;
+  background-color: #758a99;
+  border-radius: 20px;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 弹性布局 */
+  display: flex;
+  /* 元素纵向排列 */
+  flex-direction: column;
+  /* 居中 */
+  align-items: center;
+  color: #fff;
+  /* 阴影 */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  /* 不让其他被挤压 */
+  flex-shrink: 0;
+
+}
+.card .photo img{
+  width: 100%;
+  height: 100%;
+  /* 保持原有尺寸比例,裁切长边 */
+  object-fit: cover;
+}
+
+/* 默认大图 */
+.card .photo{
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  overflow: hidden;
+  /* 动画过渡 */
+  transition: 0.5s;   
+}
+
+/* 鼠标移入变小图 */
+.card:hover .photo{
+  top: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+.card .photo::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,transparent 50%,#222);
+}
+
+.card h1{
+  position: absolute;
+  top: 270px;
+  transition: 0.5s;
+}
+
+.card:hover h1{
+  top: 170px;
+}
+
+.card h2{
+  margin-top: 220px;
+  width: 80%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.card p {
+  width: 90%;
+  text-indent: 32px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+
+.card a{
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 32px;
+  border-radius: 8px;
+}
+.card a:hover{
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
+
+/* navigate bar */
+.header {
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  /* 靠近网页顶部 */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  /* ;半透明背景色 */
+  padding: 0 10px;
+  /* 左右内边距，去掉上下内边距以确保紧贴顶部 */
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  justify-content: space-between;
+  /* 左右对齐 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+.logo {
+  font-family: 方正舒体;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(109, 0, 0);
+  padding: 10px 0;
+  /* 上下内边距，确保垂直对齐 */
+  width: 40%;
+}
+
+nav {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  /* 横向排列列表项 */
+}
+
+nav li {
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 600;
+  position: relative;
+  /* 确保伪元素的相对定位 */
+}
+
+nav a {
+  color: rgb(109, 0, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-family: 方正舒体;
+  font-size: 22px;
+  display: inline-block;
+  position: relative;
+  /* 确保伪元素的绝对定位相对于链接 */
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: rgb(109, 0, 0);
+  /* 进度条颜色 */
+  position: absolute;
+  top: -5px;
+  /* 放置在文字上方 */
+  left: 0;
+  /* 从左边开始 */
+  width: 0%;
+  /* 初始宽度为0% */
+  transition: width 0.3s ease-in-out;
+  /* 添加过渡效果 */
+}
+
+nav a:hover::before {
+  width: 80%;
+  /* 悬停时进度条展开 */
+}
+
+.fade {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 10000px;
+  height: 10000px;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  z-index: 10;
+  flex-shrink: 0;
+}

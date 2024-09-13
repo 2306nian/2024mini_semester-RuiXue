@@ -1,0 +1,55 @@
+.TextMessage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2.5vw;
+    padding: 4px;
+    background-image: url('../asset/对话框.png');
+    background-size: 100%;
+    border-top: 1px solid var(--menu-border-color);
+    color: var(--menu-font-color);
+}
+.TextMessage_p {
+    margin: 0;
+    font-size:clamp(0.05rem, -0.114rem + 0.82vw, 0.5rem);
+    caret-color: transparent;
+}
+.TextMessage span {
+    opacity: 0;
+}
+.TextMessage span.revealed {
+    opacity: 1;
+}
+
+.TextMessage_button {
+    margin: 0;
+    font-size:clamp(0.05rem, -0.114rem + 0.82vw, 0.5rem);
+    padding:0;
+    -webkit-appearance: none;
+    background:none;
+    border:0;
+    font-family: inherit;
+    cursor: pointer;
+    position: absolute;
+    /* right: 74px; */
+    bottom: 0;
+}
+
+.TextMessage_head_image{
+    position: absolute;
+    height: 2.5vw;
+    width: 2.5vw;
+    bottom: 2.5vw;
+    right: 0;
+}
+
+.TextMessage_image{
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+}

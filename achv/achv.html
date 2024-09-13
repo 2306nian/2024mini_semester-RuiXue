@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑞雪 Auspicious Snow</title>
+    <link rel="stylesheet" href="./achv.css">
+    <link rel="stylesheet" href="./save.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap">
+    <script src="../achv/achv.js"></script>
+</head>
+
+<body>
+
+    <div id="blackout"></div>
+    <div class="header">
+        <li class="logo">瑞雪 Auspicious Snow</li>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="fadeToBlack3(event)">标题页</a></li>
+                <li><a href="#" onclick="fadeToBlack4(event)">登入页</a></li>
+                <li><a href="#" onclick="fadeToBlack5(event)">关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="shell">
+        <div class="shell">
+            <div class="shell_body">
+                <div class="button">
+                    <div class="prev"><i class="fa fa-angle-left"></i></div>
+                    <div class="next"><i class="fa fa-angle-right"></i></div>
+                </div>
+
+                <div class="shell_slider">
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>尊师重长</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>沉默有时并不那么好使</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>厉鬼等级精进——红衣</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>谁说人鬼殊途</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>操场上的牛马</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>图书馆的小丑</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>为什么不玩黑神话 是因为菜吗？</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>当心伪人</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>它真的只是一个普通的马桶而已</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>无尽的轮回</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>该重开了bro</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="frame">
+                            <div class="box front">
+                                <h1>瑞雪兆丰年</h1>
+                                <span class ="achievement-state">未达成</span>
+                            </div>
+                            <div class="box left"></div>
+                            <div class="box right"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="fade" id="fade"></div>
+
+</body>
+<script>
+    // 获取所有的item元素
+    var items = document.getElementsByClassName('item');
+    // 循环遍历每个item
+    for (var i = 0; i < items.length; i++) {
+        // 获取当前item
+        var item = items[i];
+        var frame = item.getElementsByClassName('frame')[0];
+        var frontBox = frame.getElementsByClassName('front')[0];
+        var leftBox = frame.getElementsByClassName('left')[0];
+        var rightBox = frame.getElementsByClassName('right')[0];
+        // 设置背景图片
+        frontBox.style.backgroundImage = 'url(./image/' + (i + 1).toString().padStart(2, '0') + '.jpg)';
+        leftBox.style.backgroundImage = 'url(./image/' + (i + 1).toString().padStart(2, '0') + '.jpg)';
+        rightBox.style.backgroundImage = 'url(./image/' + (i + 1).toString().padStart(2, '0') + '.jpg)';
+    }
+    (function () {
+        "use strict";
+        var shell = document.getElementsByClassName('shell')[0];
+        var slider = shell.getElementsByClassName('shell_slider')[0];
+        var items = shell.getElementsByClassName('item');
+        var prevBtn = shell.getElementsByClassName('prev')[0];
+        var nextBtn = shell.getElementsByClassName('next')[0];
+        // 定义变量
+        var width, height, totalWidth, margin = 20,
+            currIndex = 0,
+            interval, intervalTime = 2000;
+        function init() {
+            // 初始化函数
+            resize();
+            move(Math.floor(items.length / 2));
+            bindEvents();
+            timer();
+        }
+
+        function resize() {
+            // 窗口大小变化时调整大小
+            width = Math.max(window.innerWidth * .20, 275);
+            height = window.innerHeight * .5;
+            totalWidth = width * items.length;
+            // 设置slider宽度
+            slider.style.width = totalWidth + "px";
+            // 设置每个item的宽度和高度
+            for (var i = 0; i < items.length; i++) {
+                let item = items[i];
+                item.style.width = (width - (margin * 2)) + "px";
+                item.style.height = height + "px";
+            }
+        }
+
+        function bindEvents() {
+
+            window.onresize = resize;
+            // 点击prev按钮切换item
+            prevBtn.addEventListener('click', () => { prev(); });
+            nextBtn.addEventListener('click', () => { next(); });
+        }
+        init();
+        function move(index) {
+            // 移动shell到指定的item
+            if (index < 1) index = items.length;
+            if (index > items.length) index = 1;
+            currIndex = index;
+            // 遍历所有item
+            for (var i = 0; i < items.length; i++) {
+                let item = items[i],
+                    box = item.getElementsByClassName('frame')[0];
+                if (i == (index - 1)) {
+                    // 当前item添加active类并设置3D效果
+                    item.classList.add('item--active');
+                    box.style.transform = "perspective(1200px)";
+                } else {
+                    // 其他item移除active类并设置3D效果
+                    item.classList.remove('item--active');
+                    box.style.transform = "perspective(1200px) rotateY(" + (i < (index - 1) ? 40 : -40) + "deg)";
+                }
+            }
+            // 移动slider
+            slider.style.transform = "translate3d(" + ((index * -width) + (width / 2) + window.innerWidth / 2) + "px, 0, 0)";
+            // 设置body背景图片
+            var frontBox = items[index - 1].getElementsByClassName('front')[0];
+            document.body.style.backgroundImage = frontBox.style.backgroundImage;
+        }
+        function timer() {
+            // 定时器，自动切换shell
+            clearInterval(interval);
+            interval = setInterval(() => {
+                move(++currIndex);
+            }, intervalTime);
+        }
+        // 切换item
+        function prev() {
+            move(--currIndex);
+            timer();
+        }
+        function next() {
+            move(++currIndex);
+            timer();
+        }
+    })();
+</script>
+
+<script>
+
+    function fadeToBlack1(event) {
+        event.preventDefault(); // 阻止默认链接跳转
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto'; // 允许事件穿透
+        fadeElement.style.opacity = 1; // 开始渐变为全黑
+        setTimeout(() => {
+            window.location.href = ""; // 渐变完成后跳转到新页面
+        }, 1000); // 设置渐变时间与 CSS transition 时间一致
+    }
+
+    function fadeToBlack3(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../main/main.html";
+        }, 1000);
+    }
+    function fadeToBlack4(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../login/login.html";
+        }, 1000);
+    }
+    function fadeToBlack5(event) {
+        event.preventDefault();
+        const fadeElement = document.getElementById('fade');
+        fadeElement.style.pointerEvents = 'auto';
+        fadeElement.style.opacity = 1;
+        setTimeout(() => {
+            window.location.href = "../introduction/index.html";
+        }, 1000);
+    }
+</script>
+
+</html>
