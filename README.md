@@ -10,7 +10,7 @@
 
 项目使用纯前端技术完成底层架构设计、平面布局设计。设计思路根据面向对象原则，优先完成游戏底层功能实现并向流程组提供接口，在overworldMap.js文件中实现高自由度的地图及流程自定义开发。
 
-项目根据YouTube视频https://www.youtube.com/watch?v=fyi4vfbKEeo&list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_改造开发，借助自主开发的时间系统将原本的网状剧情结构改为线性推进，同时给予玩家足够自由度进行地图探索。借助面向对象及完善的接口设计，本项目设计了丰富的交互选项，极大地增强了游戏的沉浸感和游戏性。此外，为适配各种分辨率的显示器，CSS平面设计上采用了响应式设计，优化了各种情况下的显示效果。
+项目根据YouTube视频<a>https://www.youtube.com/watch?v=fyi4vfbKEeo&list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_</a>改造开发，借助自主开发的时间系统将原本的网状剧情结构改为线性推进，同时给予玩家足够自由度进行地图探索。借助面向对象及完善的接口设计，本项目设计了丰富的交互选项，极大地增强了游戏的沉浸感和游戏性。此外，为适配各种分辨率的显示器，CSS平面设计上采用了响应式设计，优化了各种情况下的显示效果。
 
 除游玩外，本项目也可作为微型引擎进行2DRPG开发，在./game/overworldMap.js中更改window.overworldmap即可自定义游戏地图及交互，在./game/overworldEvent.js中可自定义游戏事件，但功能和格式上限制较多，亟待优化。
 
