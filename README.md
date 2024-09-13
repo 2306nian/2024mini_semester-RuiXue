@@ -21,7 +21,7 @@
 解压即用，游戏目录下点击index.html即可在浏览器中打开。
 
 ### 架构：
-
+```
 ├── .vscode
 │   └── settings.json
 ├── achv
@@ -102,6 +102,7 @@
 │   ├── Progress.js
 │   └── save.css
 └── webfonts
+```
 
 游戏主目录下index.html为根页面，登录后跳转至main.html，游戏页面为game文件夹下index.html；
 
